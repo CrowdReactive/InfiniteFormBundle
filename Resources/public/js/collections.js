@@ -4,13 +4,6 @@
  * (c) Infinite Networks Pty Ltd <http://infinite.net.au>
  */
 
-/**
- * Provides helper javascript for handling adding and removing items from a form
- * collection. It requires jQuery to operate.
- */
-
-let $ = require('jquery');
-
 window.infinite = window.infinite || {};
 
 /**
@@ -29,7 +22,7 @@ window.infinite = window.infinite || {};
  *
  */
 $(document.documentElement).on('focus', '.collection-autoinitialize .add_item, .collection-autoinitialize .remove_item', function() {
-    const coll = $(this).closest('.collection');
+    var coll = $(this).closest('.collection');
 
     if (coll.hasClass('collection-autoinitialize')) {
         new infinite.Collection(
